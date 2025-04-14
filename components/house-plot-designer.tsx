@@ -72,7 +72,7 @@ export function HousePlotDesigner() {
     value: number[]
   ) => {
     const numValue = value[0];
-    if (numValue > 0 && numValue <= 50) {
+    if (numValue > 0 && numValue <= 100) {
       setPlotSize((prev) => ({ ...prev, [dimension]: numValue }));
     }
   };
@@ -513,7 +513,7 @@ export function HousePlotDesigner() {
                         <Slider
                           id="width"
                           min={5}
-                          max={50}
+                          max={100}
                           step={1}
                           value={[plotSize.width]}
                           onValueChange={(value) =>
@@ -535,7 +535,7 @@ export function HousePlotDesigner() {
                         <Slider
                           id="height"
                           min={5}
-                          max={50}
+                          max={100}
                           step={1}
                           value={[plotSize.height]}
                           onValueChange={(value) =>
@@ -578,11 +578,11 @@ export function HousePlotDesigner() {
                           style={{
                             width: `${Math.min(
                               90,
-                              (plotSize.width / 50) * 90
+                              (plotSize.width / 100) * 90
                             )}%`,
                             height: `${Math.min(
                               90,
-                              (plotSize.height / 50) * 90
+                              (plotSize.height / 100) * 90
                             )}%`,
                           }}
                         >
