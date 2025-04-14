@@ -190,7 +190,7 @@ export function HousePlotDesigner() {
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       // Simulate receiving an image URL from the backend
-      setGeneratedMapUrl("/placeholder.svg?height=800&width=1200");
+      setGeneratedMapUrl("/output.png");
       setStep("result");
     } catch (err: any) {
       setError(err.message || "Failed to generate map. Please try again.");
